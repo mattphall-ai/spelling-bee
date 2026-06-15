@@ -167,28 +167,30 @@ export default function App() {
         <section className="play">
           <RankBar rank={rank} score={score} thresholds={thresholds} />
 
-          <div className="typed" aria-live="polite">
-            {typed.length === 0 ? (
-              <span className="placeholder">Type or tap letters</span>
-            ) : (
-              typed.split("").map((ch, i) => (
-                <span
-                  key={i}
-                  className={
-                    ch === puzzle.center
-                      ? "ch center"
-                      : puzzle.letters.includes(ch)
-                        ? "ch"
-                        : "ch invalid"
-                  }
-                >
-                  {ch.toUpperCase()}
-                </span>
-              ))
-            )}
-          </div>
+          <div className="typed-row">
+            <div className="typed" aria-live="polite">
+              {typed.length === 0 ? (
+                <span className="placeholder">Type or tap letters</span>
+              ) : (
+                typed.split("").map((ch, i) => (
+                  <span
+                    key={i}
+                    className={
+                      ch === puzzle.center
+                        ? "ch center"
+                        : puzzle.letters.includes(ch)
+                          ? "ch"
+                          : "ch invalid"
+                    }
+                  >
+                    {ch.toUpperCase()}
+                  </span>
+                ))
+              )}
+            </div>
 
-          {toast && <div className={`toast ${toast.tone}`}>{toast.text}</div>}
+            {toast && <div className={`toast ${toast.tone}`}>{toast.text}</div>}
+          </div>
 
           <Hive center={puzzle.center} outer={outer} onLetter={addLetter} />
 

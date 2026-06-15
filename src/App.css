@@ -122,14 +122,27 @@
   color: var(--muted);
 }
 
+/* Typed word row + toast overlay */
+.typed-row {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
 /* Toast */
 .toast {
-  position: relative;
-  margin: 6px 0 2px;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 6px;
   padding: 6px 14px;
   border-radius: 16px;
   font-weight: 600;
   font-size: 0.9rem;
+  white-space: nowrap;
+  z-index: 2;
   animation: pop 0.15s ease;
 }
 
@@ -145,11 +158,11 @@
 
 @keyframes pop {
   from {
-    transform: scale(0.9);
+    transform: translateX(-50%) scale(0.9);
     opacity: 0;
   }
   to {
-    transform: scale(1);
+    transform: translateX(-50%) scale(1);
     opacity: 1;
   }
 }
@@ -164,8 +177,8 @@
 
 .cell {
   position: absolute;
-  width: 86px;
-  height: 76px;
+  width: 106.33px;
+  height: 69.6px;
   transform: translate(-50%, -50%);
   border: none;
   background: var(--border);
