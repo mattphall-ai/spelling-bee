@@ -177,8 +177,8 @@
 
 .cell {
   position: absolute;
-  width: 106.33px;
-  height: 69.6px;
+  width: 96px;
+  height: 96px;
   transform: translate(-50%, -50%);
   border: none;
   background: var(--border);

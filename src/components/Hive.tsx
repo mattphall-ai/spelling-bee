@@ -7,12 +7,12 @@ interface HiveProps {
 // Positions (% of the square container) for the six outer cells around the
 // center, arranged as a flat-top honeycomb.
 const OUTER_POSITIONS = [
-  { left: 50, top: 26 }, // top
-  { left: 77.5, top: 38 }, // upper-right
-  { left: 77.5, top: 62 }, // lower-right
-  { left: 50, top: 74 }, // bottom
-  { left: 22.5, top: 62 }, // lower-left
-  { left: 22.5, top: 38 }, // upper-left
+  { left: 50, top: 16.9 }, // top
+  { left: 74.83, top: 33.45 }, // upper-right
+  { left: 74.83, top: 66.55 }, // lower-right
+  { left: 50, top: 83.1 }, // bottom
+  { left: 25.17, top: 66.55 }, // lower-left
+  { left: 25.17, top: 33.45 }, // upper-left
 ];
 
 function Cell({
